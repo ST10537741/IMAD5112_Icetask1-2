@@ -20,6 +20,7 @@ class Activity2 : AppCompatActivity() {
 
         // when statement that prints suggestions when the user inputs valid times of day
        confirmButton.setOnClickListener {
+           val results =""
 
            val timeOfDay = timeOfDayEditText.text.toString()  // declaring val timeOfDay to EditText
            when (timeOfDay) {
@@ -31,7 +32,9 @@ class Activity2 : AppCompatActivity() {
                            "tomorrow.")
                else -> print("Invalid time of day")   // if the user does not input a valid time of day this message will be outputted
            }
-           timeOfDayTextView.text = ""
+           timeOfDayTextView.text = results
+
+
 
 
        }
@@ -41,6 +44,7 @@ class Activity2 : AppCompatActivity() {
         resetButton.setOnClickListener {
         // make resetButton erase all results
             timeOfDayEditText.text.clear()
+            timeOfDayTextView.text = ""
 
         }
     }
